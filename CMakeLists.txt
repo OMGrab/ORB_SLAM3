@@ -153,6 +153,10 @@ if(realsense2_FOUND)
     add_executable(rgbd_realsense_D435i
             Examples/RGB-D/rgbd_realsense_D435i.cc)
     target_link_libraries(rgbd_realsense_D435i ${PROJECT_NAME})
+    
+    add_executable(rgbd_realsense_bag
+            Examples/RGB-D/rgbd_realsense_bag.cc)
+    target_link_libraries(rgbd_realsense_bag ${PROJECT_NAME})
 endif()
 
 
@@ -189,9 +193,9 @@ if(realsense2_FOUND)
             Examples/Stereo/stereo_realsense_D435i.cc)
     target_link_libraries(stereo_realsense_D435i ${PROJECT_NAME})
 
-    add_executable(stereo_realsense_D435
-            Examples/Stereo/stereo_realsense_D435.cc)
-    target_link_libraries(stereo_realsense_D435 ${PROJECT_NAME})
+    # add_executable(stereo_realsense_D435
+    #         Examples/Stereo/stereo_realsense_D435.cc)
+    # target_link_libraries(stereo_realsense_D435 ${PROJECT_NAME})
 endif()
 
 #Monocular examples
