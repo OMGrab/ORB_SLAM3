@@ -269,6 +269,13 @@ if(realsense2_FOUND)
     target_link_libraries(stereo_inertial_realsense_D435i ${PROJECT_NAME})
 endif()
 
+# Streaming examples (no RealSense dependency)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/Examples/Streaming)
+
+add_executable(rgbd_inertial_streaming
+        Examples/Streaming/rgbd_inertial_streaming.cc)
+target_link_libraries(rgbd_inertial_streaming ${PROJECT_NAME})
+
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/Examples/Calibration)
 if(realsense2_FOUND)
     add_executable(recorder_realsense_D435i
